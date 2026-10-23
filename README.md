@@ -2,7 +2,23 @@
 
 Dbrij Resolve for **Android** in Kotlin: your support desk as a screen in your app, with signed sign in, screenshots on tickets and the unread badge. Android 6 (API 23) and later.
 
-Add the module to your build: copy this folder into your project and `include(":resolve")` in settings.gradle.kts, then `implementation(project(":resolve"))`. It is not on Maven Central yet.
+Add JitPack to your repositories in settings.gradle.kts, then the dependency:
+
+```kotlin
+// settings.gradle.kts
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+
+// app/build.gradle.kts
+dependencies {
+    implementation("com.github.dbrij:resolve-android:0.1.0")
+}
+```
 
 ## The support screen
 
